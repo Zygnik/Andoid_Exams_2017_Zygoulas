@@ -33,13 +33,11 @@ public class FetchMerchantsTask extends AsyncTask<String,Void,ArrayList<Merchant
         ArrayList<Merchant> merchants = new ArrayList<>();
         try{
             JSONArray merchantsArray = new JSONArray(merchantJsonStr);
-            //.....
+            for(int i = 0; i < merchantsArray.length(); i++) {
 
+                Merchant m = new Merchant();
 
-
-
-
-            //......
+            }
             Log.d(LOG_TAG, "Merchant Fetching Complete. " + merchants.size() + "merchants inserted");
             return  merchants;
         }catch (JSONException e) {
